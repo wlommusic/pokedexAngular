@@ -2,9 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
-# the website is deployed on netlify you can find it [here](https://pokemonsters.netlify.app/) 
+# <em>The website is deployed on netlify you can find it [here](https://pokemonsters.netlify.app/)</em> 
 
-## dependencies
+## Dependencies
 
 <li>fontawesome</li>
 <li>ng-bootstrap</li>
