@@ -1,0 +1,92 @@
+
+<ng-container *ngIf="pokemon">
+    <div class="bg bg-{{getType(pokemon)}} py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mt-2">
+                                <h1 style ="font-family: 'Ubuntu', sans-serif; font-size: 35px;"><strong>{{pokemon.name | titlecase}}</strong></h1>
+                                <span *ngFor="let type of pokemon.types"
+                                    class="badge border rounded-pill me-1 bg-{{getType(pokemon)}}">
+                                    {{type.type.name | titlecase}}
+                                </span>
+                            </div>
+
+                            <ul  class="list-group list-group-flush mt-4" style="width: 20rem;">
+                                <li class="list-group-item bg-transparent">Experience <b
+                                        class="float-end">{{pokemon.base_experience}}</b></li>
+                                <li class="list-group-item bg-transparent">Height<b
+                                        class="float-end">{{pokemon.height}}"</b></li>
+                                <li class="list-group-item bg-transparent">Weight <b
+                                        class="float-end">{{pokemon.weight}} Lbs</b></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon.id}}.png" alt=""
+                                class="img-fluid d-block mx-auto" style="width: 300px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color:#424242" class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path 
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2">
+
+                <!-- evolution -->
+                <div class="row">
+                    <div  *ngFor="let evolution of pokemon.evolutions" class="col-sm mb-3">
+                        <div style ="font-family: 'Ubuntu', sans-serif ; color: white;" class="card" [routerLink]="['/view', evolution.name]">
+                            <div style="background-color: #424242;"class="card-body">
+                                <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 25px;"class="card-title text-center mb-3">{{evolution.name | titlecase}}</h4>
+                                <img src="https://pokeres.bastionbot.org/images/pokemon/{{evolution.id}}.png" alt=""
+                                    class="img-fluid d-block mx-auto" style="width: 150px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- stats -->
+                <div style="background-color: #424242;font-size: large;"class="card mb-3">
+                    <div  style ="font-family: 'Ubuntu', sans-serif; color:white;" class="card-body">
+                        <h4 class="card-title">Stats</h4>
+                        <div *ngFor="let stat of pokemon.stats" class="row mt-3">
+                            <div class="col-sm-2">
+                                <h6 style ="font-family: 'Ubuntu', sans-serif ;font-size: medium;" class="text-sm-end mt-1">{{stat.stat.name | titlecase}}</h6>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress" style="height: 30px">
+                                    <div class="progress-bar progress-bar-striped bg-{{getType(pokemon)}}"
+                                        role="progressbar" style="height: 30px;" [style.width]="stat.base_stat + '%'"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <b>{{stat.base_stat}}</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- abilities -->
+                <div style="background-color: #424242; color: white;" class="card mb-3">
+                    <div class="card-body">
+                        <h4 class="card-title">Abilities</h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li style="background-color: #424242; color: white; font-size: large;" *ngFor="let ability of pokemon.abilities" class="list-group-item">
+                            {{ability.ability.name | titlecase}}
+                        </li>
+                    </ul>
+                </div>

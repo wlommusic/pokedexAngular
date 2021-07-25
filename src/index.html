@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <title>PokedexApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+  <!-- <link rel="shortcut icon" sizes="16x16" href="favicon-16x16.ico" type="image/png" /> -->
+  <link
+    href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGgAAAHwAAAC9AAAA2QAAANkAAADBAAAAhQAAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAYGBvNXV1f/q6uq/9TU1P/V1dX/paWl/0dHRv8HBwb3AAAAgQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAkSQkJP/R0dD////////////////////////////19fX/oKCf/yIiIf8AAACpAAAAAgAAAAAAAAAAAAAAaCIiIv/n5+f//////////////////////////////////////+Xl5f+qqqr/IiIh/wAAAIEAAAAAAAAAEgMDA+/Jycn///////////////////////39/f/9/f3////////////+/v7/vLy8/5ubmv8GBgb3AAAAIgAAAG5KSkn/////////////////+/v7/3h4d/8WFhb/FBQU/2lpaP/29vb//////9rb2/+xsbH/RERD/wAAAIUAAACrl5eX/////////////////4GBgP8wMDD/ysrK/8/Pzv9AQED/aGhn///////s7O3/r6+v/4KCgf8AAADDAAAAz0lJSf9kZGT/ZGRk/2RkZP8RERD/wcHB/yoqKv8cHBv/0NDP/woKCv9kZGT/YGBg/0VFRP88PDv/AAAA2wAAAM0NCDn/DwhJ/xYKZP8ZCm//BAMT/7u7u/88PDz/Kioq/8vLy/8DAgv/GQpu/xgKbP8YCm3/FQld/wAAANkAAACnEQlR/xsMi/8lDbj/Kg3P/xkKdP8lJST/u7u7/8HBwP8wMDD/FQlh/yoN0P8qDc3/Kg3O/x8Mjv8AAAC9AAAAZAgFJP8cDI7/IQym/yoNzf8qDc7/GQp0/wcEH/8GAxz/Fwpp/yoNzf8qDcz/Kg3M/ysN0f8PB0f/AAAAfAAAAA4AAAHrFgtr/x0Mkf8qDcz/Kg3M/yoNzv8qDc//Kg7P/yoNzv8qDcz/Kg3M/yoNzP8lDa3/AQEE9QAAABoAAAAAAAAAWgMCDv8aDHz/Iw2w/yoNzf8qDcz/Kg3M/yoNzP8qDcz/Kg3M/yoNzP8oDsH/BwQd/wAAAHAAAAAAAAAAAAAAAAAAAAB8AwIP/xYLbP8mDb3/Kg3O/yoNzP8qDcz/Kg3M/ysN0f8jDab/BgMb/wAAAJEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFoAAADrCAUk/xYJaf8hDJ7/Igyj/xoKe/8OBzz/AQEC7wAAAGoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAGQAAACnAAAAzQAAAM8AAACrAAAAbAAAABQAAAAAAAAAAAAAAAAAAAAA/B8AAPAHAADAAwAAwAEAAIABAACAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAOADAADwDwAA/D8AAA=="
+    rel="icon" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+</head>
+
+<body class="mat-typography">
+  <div class="demo"></div>
+  <app-root></app-root>
+  <script>
+    var egg = new Egg();
+    egg
+      .addCode("s,h,i,v,a,m", function () {
+        jQuery('#egggif').fadeIn(500, function () {
+          window.setTimeout(function () { jQuery('#egggif').hide(); }, 5000);
+        });
+      })
+      .addHook(function () {
+        let shivam = "shivam The Pokemon appreared\nthrow a pokeball?"
+        // window.alert(shivam)
+        r=confirm(shivam)
+        if (r==true)confirm("Shivam was caught ^^");
+        else confirm("Shivam escaped !!");
+        console.log(this.activeEgg.metadata);
+      }).listen();
+
+  </script>
+</body>
+
+</html>

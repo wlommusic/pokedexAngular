@@ -1,0 +1,26 @@
+@import url('https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon');
+
+.pokemon{
+    font-family:Pokemon, Helvetica, sans-serif;
+    text-align: center;  
+        
+}
+
+.linear-wipe {
+    padding-bottom: 15px;
+	 text-align: center;
+	 background: linear-gradient(to right, #fcffa4 20%, #fbec5d 40%, #ffff31 60%, #E52B50 80%);
+	 background-size: 200% auto;
+	 color: #000;
+	 background-clip: text;
+	 text-fill-color: transparent;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 animation: shine 1s linear infinite;
+}
+ @keyframes shine {
+	 to {
+		 background-position: 200% center;
+	}
+}
+ 
