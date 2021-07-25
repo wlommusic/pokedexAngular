@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
+# the website is deployed on netlify you can find it [here](https://pokemonsters.netlify.app/) 
+
 ## dependencies
 
 <li>fontawesome</li>
